@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            firstName: "John",
+            middleName: "Doe",
+            lastName: "Bloom"
+        }
+
+        // tanpa with statement
+        document.writeln(person.firstName);
+        document.writeln(person.middleName);
+        document.writeln(person.lastName);
+
+        // menggunakan with statement
+        with (person) {
+            document.writeln(`<p>${firstName}</p>`)
+            document.writeln(`<p>${middleName}</p>`)
+            document.writeln(`<p>${lastName}</p>`)
+        }
+    </script>
+</body>
+</html>

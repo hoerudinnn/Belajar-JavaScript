@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person (name = "Budi", gender = "male") {
+            if (name == "Budi") {
+                for (let i = 0; i < name.length; i++) {
+                console.info(`Hello ${name}`);
+                }
+            } else {
+                console.info(`Anda bukan Budi`);
+            }
+            console.info(gender);
+        }
+
+        person ();
+        person("Budi");
+        person("Hoerudin", "female");
+        person("Hoerudin", null);
+    </script>
+</body>
+</html>

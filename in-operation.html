@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const inOperator = {
+            firstName: "John",
+            lastName: "Doe",
+        }
+
+        if ("firstName" in inOperator) {
+            alert(`hello ${inOperator.firstName}`);
+        } else { 
+            alert(`hello`);
+        }
+
+        const names = {
+            "Nama Lengkap": "Hoerudin",
+            "MiddleName": undefined,
+            "Nama Belakang": "Permana"
+        }
+
+        if ("Middle Name" in names) {
+            alert (`Hello ${names.MiddleName}`);
+        } else {
+            alert (`Hello Undefined`);
+        }
+
+        const color = [null, "blue", null];
+
+        if (color.includes(null)) {
+            alert("Hello Blue");
+        } else {
+            alert("Hello Guys");
+        }
+    </script>
+</body>
+</html>

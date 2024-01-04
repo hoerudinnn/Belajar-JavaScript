@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const orang = {}
+
+        // menambah nilai attribute
+        /* orang ["nama"] = "Budi",
+        orang ["alamat"] = "Bogor",
+        orang ["umur"] = "25";
+        */
+
+        // Membuat langsung 
+        const orang = {
+            "Nama Lengkap": "Hoerudin",
+            alamat: "Bogor",
+            umur: 25,
+        }
+
+        console.table(orang);
+
+        console.info (`Nama: ${orang["Nama Lengkap"]}`);
+        console.info (`Alamat: ${orang.alamat}`);
+        console.info (`umur: ${orang.umur}`);
+
+        // menghapus object
+        delete orang["umur"];
+        console.table(orang);
+
+    </script>
+   
+</body>
+</html>
