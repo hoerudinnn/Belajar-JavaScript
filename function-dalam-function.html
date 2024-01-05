@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function dalam function</title>
+</head>
+<body>
+    <script>
+
+    function outer() {
+        document.writeln("Hello"); // Menulis "Hello" ke dalam dokumen
+
+        function inner() { // Mendefinisikan fungsi inner di dalam outer
+            document.writeln("Inner"); // Menulis "Inner" ke dalam dokumen
+        }
+
+        inner(); // Memanggil fungsi inner
+        inner(); // Memanggil fungsi inner lagi
+    }
+
+    outer(); // Memanggil fungsi outer
+
+
+    </script>
+</body>
+</html>
