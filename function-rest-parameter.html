@@ -7,7 +7,25 @@
 </head>
 <body>
     <script>
-        let mainYu = [ ];
+    function sum(name, ...data) {  // Fungsi sum mengambil 'name' sebagai input pertama, diikuti dengan data yang tidak ditentukan banyaknya menggunakan spread operator (...)
+        let total = 0; // Inisialisasi pembolehubah 'total' untuk menyimpan jumlah data
+        for (const item of data) { // Melakukan loop pada setiap 'item' dalam data
+            total += item; // Menambahkan setiap 'item' ke dalam 'total'
+        }
+
+        document.writeln(`<p>${name} ini total ${total}</p>`); // Menuliskan hasil dalam dokumen HTML menggunakan document.writeln dengan menggunakan string template literals
+    }
+
+    // Memanggil fungsi 'sum' dengan contoh data yang berbeda
+    sum('orange', 20, 40, 30, 40, 10);
+    sum('apple', 20, 40, 20, 40, 50);
+    sum('banana', 70, 90, 30, 40, 10);
+
+    // syntax spread operator
+    const values = [40, 70, 20, 50, 43, 85]; // Array `values` yang berisi sekumpulan nilai
+    sum('wine', ...values); // Memanggil fungsi `sum` dengan nama 'wine' dan nilai-nilai dari array `values` menggunakan spread operator (...)
+
+
     </script>
 </body>
 </html>
