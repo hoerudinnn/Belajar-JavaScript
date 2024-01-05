@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function sebagai value</title>
+</head>
+<body>
+    <script>
+
+    // Fungsi sayHello untuk menulis pesan "Hello" dengan menggunakan nama yang diberikan
+    function sayHello(name) {
+        document.writeln(`<p> Hello ${name} </p>`);
+    }
+
+    sayHello("Budi");
+
+    let say = sayHello; // Mendeklarasikan pembolehubah say yang sama dengan fungsi sayHello
+    say("Eko");
+
+    // Fungsi giveMeName menerima sebuah callback dan menjalankannya dengan argumen "Aji"
+    function giveMeName(callback) {
+        callback("Aji");
+    }
+
+    giveMeName(sayHello); // Memanggil fungsi giveMeName dengan menggunakan sayHello sebagai callback
+    giveMeName(say); // Memanggil fungsi giveMeName dengan menggunakan say sebagai callback
+
+
+    </script>
+</body>
+</html>
