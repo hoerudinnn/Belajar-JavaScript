@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anonymous di functions</title>
+</head>
+<body>
+    <script>
+
+        // Anonymous function di dalam variabel
+        const anonymousFunction = function(name) {
+            document.writeln (`<p> Hello ${name} </p>`);
+        }
+
+        anonymousFunction("Eko");
+
+        /*
+        Di sini, sebuah fungsi tanpa nama yang menerima satu parameter 
+        name ditetapkan ke variabel anonymousFunction. Ketika fungsi 
+        ini dipanggil dengan anonymousFunction("Eko"), ia menuliskan 
+        pesan <p> Hello Eko </p> ke dalam dokumen.
+        */
+
+        // Anonymous function di dalam parameter
+        function giveMeName(callback) {
+            callback("Aji");
+        };
+
+        giveMeName(function(name) {
+            document.writeln (`<p> Hi, ${name} </p>`);
+        });
+
+        /*
+        Fungsi giveMeName menerima satu parameter, yaitu sebuah callback. 
+        Saat dipanggil, ia memanggil callback dengan argumen "Aji". 
+        Di sini, saat giveMeName dipanggil, sebuah anonymous function 
+        juga didefinisikan dan diberikan ke giveMeName sebagai callback. 
+        Saat fungsi anonim ini dipanggil oleh giveMeName, ia menuliskan 
+        pesan <p> Hi, Aji </p> ke dalam dokumen.
+        */
+
+    </script>
+</body>
+</html>
