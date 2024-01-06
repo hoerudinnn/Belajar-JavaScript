@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // cara 1
+        // const person = {
+        //     name: 'John',
+        //     sayHello: function(name) {
+        //         alert(`Hello ${name}`);
+        //     }
+        // }
+
+        // cara 2
+        const person = {
+            name: 'John'
+        };
+
+        person.sayHello = function(name) {
+            alert(`Hello ${name}`);
+        }
+
+        person.sayHello("Budi");
+
+    </script>
+</body>
+</html>
