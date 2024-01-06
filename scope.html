@@ -8,7 +8,50 @@
 <body>
     <script>
 
-        
+        // global scope
+        let counter = 0;
+
+        function hitMe() {
+            // local scope hitme
+            counter++;
+        }
+
+        function giveMe() {
+            // local scope giveme
+        }
+
+        hitMe();
+        hitMe();
+
+        document.writeln(counter);
+
+
+        function first () {
+            let firstScope = "first";
+            document.writeln(firstScope);
+        }
+
+        function second () {
+            let secondScope = "second";
+            document.writeln(secondScope);
+        }
+
+        first();
+        second();
+
+        document.writeln(firstScope); // ERROR
+        document.writeln(secondScope); // ERROR
+
+        // NESTER FUNCTION SCOPE
+        function nestedFunctionScope() {
+            let nested = "function nested";
+
+            function firstNestedScope() {
+                document.writeln(nested);
+            }
+
+            firstNestedScope(); // Memanggil fungsi firstNestedScope di dalam nestedFunctionScope
+        };
 
     </script>
 </body>

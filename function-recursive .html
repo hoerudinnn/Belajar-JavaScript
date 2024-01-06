@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recursive function</title>
+</head>
+<body>
+    <script>
+
+        // Fungsi untuk menghitung faktorial menggunakan pendekatan loop
+        function factorialLoop(value) {
+            let result = 1; // Inisialisasi hasil faktorial sebagai 1
+            for (let i = 1; i <= value; i++) { // Perulangan dari 1 hingga nilai yang diberikan
+                result *= i; // Mengalikan hasil dengan nilai i pada setiap iterasi
+            };
+            return result; // Mengembalikan hasil faktorial
+        }
+
+        document.writeln(factorialLoop(7)); // Memanggil fungsi dengan argumen 5 dan menampilkan hasilnya di HTML
+
+
+        // recursive function
+        function factorialRecursive(value) { // Fungsi untuk menghitung faktorial menggunakan pendekatan rekursif
+            if (value === 1) { // Jika nilai adalah 1, kembalikan 1 (basis dari rekursi)
+                return 1;
+            } else {
+                return value * factorialRecursive(value - 1); // Kalikan nilai dengan faktorial dari nilai kurang 1
+            }
+        }
+
+        document.writeln(factorialRecursive(7)); // Memanggil fungsi dengan argumen 7 dan menampilkan hasilnya di HTML
+
+    </script>
+</body>
+</html>
