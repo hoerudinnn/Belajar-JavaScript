@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Fungsi generator yang menghasilkan tiga nama
+        function* generatorFunction() {
+            yield "Eko"; // Menghasilkan nama Eko
+            yield "Aji"; // Menghasilkan nama Aji
+            yield "Santoso"; // Menghasilkan nama Santoso
+        }
+
+        // Menginisialisasi generator dan menampilkan nama-nama dengan for-of loop
+        const names = generatorFunction();
+            for (const name of names) {
+                document.writeln(name);
+        }
+
+        // Fungsi generator untuk menghasilkan bilangan ganjil hingga batas tertentu
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) { // Jika i adalah bilangan ganjil
+                    yield i; // Menghasilkan bilangan ganjil
+                }
+            }
+        }
+
+        const numbers = buatGanjil(50);
+        // for (const number of numbers) {
+        //     document.writeln (`<p> ini bilangan ganjil ${number} </p> `);
+        // }
+
+        document.writeln(numbers.next().value);
+        document.writeln(numbers.next().value);
+        document.writeln(numbers.next().value);
+
+    </script>
+</body>
+</html>
