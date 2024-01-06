@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Membuat fungsi createAdder yang menerima satu parameter 'value'
+        function createAdder(value) {
+            const owner = "Hoer"; // Membuat variabel 'owner' di dalam fungsi createAdder
+
+            function addTo(param) { // Membuat fungsi addTo yang menerima satu parameter 'param'
+                document.writeln(owner); // Menulis nilai dari variabel 'owner' ke dalam dokumen (hanya untuk tujuan demonstrasi)
+                return value + param; // Mengembalikan hasil penambahan antara 'value' (dari lingkungan createAdder) dan 'param'
+            }
+
+            return addTo; // Mengembalikan fungsi addTo (tetapi tidak memanggilnya)
+        }
+
+        // Memanggil createAdder dengan nilai 2 dan menyimpan hasilnya di variabel 'addTwo'
+        const addTwo = createAdder(2);
+
+        document.writeln(addTwo(10));
+        document.writeln(addTwo(20));
+
+
+    </script>
+</body>
+</html>
