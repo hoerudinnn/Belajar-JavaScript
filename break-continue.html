@@ -9,26 +9,30 @@
     <script>
 
         // Break
+        // Inisialisasi pembolehubah 'counter' dengan nilai awal 1
         let counter = 1;
 
+        // Memulai loop 'while' yang berjalan selama kondisinya 'true'
         while (true) {
-            document.writeln(`<p>Perulangan ke ${counter}</p>`);
-            counter++;
+            document.writeln(`<p>Perulangan ke ${counter}</p>`); // Menuliskan pesan ke dalam dokumen HTML dengan menggunakan nilai 'counter' pada tag <p>
+            counter++; // Increment nilai 'counter' setiap kali iterasi
 
-            if (counter > 8) {
-                break;
+            if (counter > 8) { // Memeriksa apakah nilai 'counter' sudah lebih besar dari 8
+                break; // Jika ya, keluar dari loop 'while' dengan perintah 'break'
             }
         }
+
 
 
         // continue
-        for (let i = 0; i < 100; ++i) {
-            if (i % 2 == 0) {
-                continue;
+        for (let i = 0; i < 100; ++i) {  // Loop 'for' yang dimulai dari nilai 'i' sama dengan 0, berjalan selama 'i' kurang dari 100, dan menambahkan 'i' sebanyak 1 pada setiap iterasi
+            if (i % 2 == 0) { // Memeriksa jika nilai 'i' modulo 2 adalah 0 (genap)
+                continue; // Jika nilai 'i' adalah genap, maka menggunakan 'continue' untuk melanjutkan ke iterasi berikutnya tanpa menjalankan kode di bawahnya
             }
 
-            document.writeln(i);
+            document.writeln(i); // Menuliskan nilai 'i' ke dalam dokumen HTML
         }
+
     </script>
 </body>
 </html>
