@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Mendefinisikan objek 'person' dengan properti firstName, lastName,
+        // serta getter dan setter untuk properti virtual fullName.
+        const person = {
+            firstName: "Jhon",
+            lastName: "Doe",
+            // Getter 'fullName' mengembalikan string sapaan dengan nama lengkap yang tersimpan dalam objek.
+            get fullName() {
+                return `Hello ${this.firstName} dan ${this.lastName}`;
+            },
+            // Setter 'fullName' memecah string nama lengkap yang diberikan menjadi 'firstName' dan 'lastName',
+            // lalu menyimpannya dalam objek 'person'.
+            set fullName(value) {
+                const array = value.split(" ");
+                this.firstName = array[0];
+                this.lastName = array[1];
+            }
+        }
+
+        // Mengubah nilai 'fullName' menjadi "Budi Doremi" dan memperbarui properti 'firstName' menjadi "Budi" dan 'lastName' menjadi "Doremi".
+        person.fullName = "Budi Doremi";
+        console.table(person);
+
+        // Mengubah nilai 'fullName' menjadi "Aji Santoso" dan memperbarui properti 'firstName' menjadi "Aji" dan 'lastName' menjadi "Santoso".
+        person.fullName = "Aji Santoso";
+        console.table(person);
+
+        // Mengubah nilai 'fullName' menjadi "Iwan Irawan" dan memperbarui properti 'firstName' menjadi "Iwan" dan 'lastName' menjadi "Irawan".
+        person.fullName = "Iwan Irawan";
+        console.table(person);
+
+
+    </script>
+</body>
+</html>
