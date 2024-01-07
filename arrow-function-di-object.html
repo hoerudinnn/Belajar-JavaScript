@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function di object</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            name: "Jhon",
+            sayHello: (name) => { // arrow function di dalam method
+                console.info (this) // WINDOW -> arrow function didalam method tdk bisa mengakses method this, nanti hasilnya window
+                console.info(`Hello ${name}`) // kalau mau mengakses method this.name harus pakai function biasa
+            }
+        }
+
+        person.sayHello("Budi");
+
+    </script>
+</body>
+</html>
