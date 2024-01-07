@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.info(this);
+
+        const person = {
+            name: "John",
+            sayHello: function(value) { 
+                console.info(`Hello, ${value} My Name is ${this.name}`); // Menampilkan pesan 'Hello' bersama dengan nilai 'value' yang diterima. serta mencantumkan nama dari properti 'name' di objek 'person' menggunakan 'this'
+            }
+        }
+
+        person.sayHello("Budi");
+
+
+    </script>
+</body>
+</html>
